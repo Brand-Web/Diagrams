@@ -41,7 +41,7 @@ classDiagram
 
    User <|-- ProductOwner
    User <|-- Member
-
+   Client<..Spin
    User <|-- Client
    Member <|-- Chef
    Member <|-- Barman
@@ -57,15 +57,16 @@ classDiagram
 
 ```mermaid
 classDiagram 
-  Basket <-- Command
+  
   Category --  Product
   Product *-- Ingredient
-  Command <-- Product
+  BwCard <-- Product
+   BwCard<--Command
+   BwCard<--Coupon
+   Product <-- Coupon
 
-   Utility <-- Coupon
-   Utility <-- Spin
-   Utility <-- FidelityPoint
-   Product <--> Utility
+   Command <.. FidelityPoint
+  
   
    
 
