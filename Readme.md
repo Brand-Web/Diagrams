@@ -1,8 +1,25 @@
 # Diagram d'activité
+
 ```mermaid
-flowchart TD
-    B["fab:fa-twitter for peace"]
-    B-->C[fa:fa-ban forbidden]
-    B-->D(fa:fa-spinner)
-    B-->E(A fa:fa-camera-retro perhaps?)
+flowchart TB
+    msAuth(Authentification)
+    id(Web app)
+    web((Appl))
+  
+    subgraph Microservies
+    
+    end
+    subgraph Databases
+    db[(db)]
+    db1[(db)]
+    db...[(...)]
+    end
+     
+    subgraph Microservies
+    ms(ms)
+    ms1[(ms)]
+    ms...[(...)]
+    end
+  
+
 ```
