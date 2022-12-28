@@ -20,32 +20,12 @@ classDiagram
    Reporting ..> User 
    Product ..> User
 
-    class User{
-
-    }
-    class ProductOwner{
-
-    }
-
-    class Member{
-
-    }
-    class Client{
-
-    }
-    class System{
-
-    }
-    class Reporting{
-
-    }
-    class Product{
-
-    }
-
 ```
 
 
+&nbsp;
+
+# Cas de restauration
 ## User
 ```mermaid
 %%    <|--	Inheritance
@@ -58,32 +38,56 @@ classDiagram
 %%    ..	Link (Dashed)
 classDiagram 
 
-   System  <|.. User 
    User <|-- ProductOwner
    User <|-- Member
+
    User <|-- Client
-   Reporting ..> User 
-   Product ..> User
+   Member <|-- Chef
+   Member <|-- Barman
+   Member <|-- waiter
 
-    class User{
+ 
 
-    }
-    class ProductOwner{
+  
 
-    }
-
-    class Member{
-
-    }
-    class Client{
-
-    }
-    
-    class Reporting{
-
-    }
-    class Product{
-
-    }
+  
 
 ```
+ &nbsp;
+
+## Product
+```mermaid
+classDiagram 
+  Category --  Product
+  Product *-- Ingredient
+  Command <-- Product
+
+   Utility <-- Coupon
+   Utility <-- Spin
+   Utility <-- FidelityPoint
+   Product <--> Utility
+  
+   
+
+``` 
+
+ &nbsp;
+
+## Reporting
+```mermaid
+classDiagram 
+   Reporting <-- Member : command
+  Reporting <-- Member : time
+
+  Reporting <-- Product : command
+  Reporting <-- Product : 
+  Member <|-- Chef
+  Member <|-- Barman
+  Member <|-- waiter
+
+ 
+
+  
+   
+
+``` 
