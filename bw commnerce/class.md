@@ -1,16 +1,16 @@
 # Diagramme de class
 
-
 ## Root
+
 ```mermaid
-%%    <|--	Inheritance
-%%    \*--	Composition
-%%    o--	Aggregation
-%%    -->	Association
-%%    --	Link (Solid)
-%%    ..>	Dependency
-%%    ..|>	Realization
-%%    ..	Link (Dashed)
+%%    <|-- Inheritance
+%%    \*-- Composition
+%%    o-- Aggregation
+%%    --> Association
+%%    -- Link (Solid)
+%%    ..> Dependency
+%%    ..|> Realization
+%%    .. Link (Dashed)
 classDiagram 
 
    System  <|.. User 
@@ -22,20 +22,21 @@ classDiagram
 
 ```
 
-
 &nbsp;
 
-# Cas de restauration
-## User
+## Cas de réstauration
+
+### User
+
 ```mermaid
-%%    <|--	Inheritance
-%%    \*--	Composition
-%%    o--	Aggregation
-%%    -->	Association
-%%    --	Link (Solid)
-%%    ..>	Dependency
-%%    ..|>	Realization
-%%    ..	Link (Dashed)
+%%    <|-- Inheritance
+%%    \*-- Composition
+%%    o-- Aggregation
+%%    --> Association
+%%    -- Link (Solid)
+%%    ..> Dependency
+%%    ..|> Realization
+%%    .. Link (Dashed)
 classDiagram 
 
    User <|-- ProductOwner
@@ -48,14 +49,12 @@ classDiagram
 
  
 
-  
-
-  
-
 ```
+
  &nbsp;
 
-## Product
+### Product
+
 ```mermaid
 classDiagram 
   Basket <-- Command
@@ -70,11 +69,12 @@ classDiagram
   
    
 
-``` 
+```
 
  &nbsp;
 
-## Reporting
+### Reporting
+
 ```mermaid
 classDiagram 
   Reporting <-- Member : command
