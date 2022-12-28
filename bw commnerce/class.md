@@ -58,6 +58,7 @@ classDiagram
 ## Product
 ```mermaid
 classDiagram 
+  Basket <-- Command
   Category --  Product
   Product *-- Ingredient
   Command <-- Product
@@ -76,18 +77,20 @@ classDiagram
 ## Reporting
 ```mermaid
 classDiagram 
-   Reporting <-- Member : command
+  Reporting <-- Member : command
   Reporting <-- Member : time
 
   Reporting <-- Product : command
-  Reporting <-- Product : 
   Member <|-- Chef
   Member <|-- Barman
   Member <|-- waiter
-
- 
+ Reporting <-- Client : products
+ Reporting <-- ProductOwner : products
+ Reporting <-- ProductOwner : members
+ Reporting <-- ProductOwner : billing
+ Reporting <-- ProductOwner : activities
 
   
    
 
-``` 
+```
